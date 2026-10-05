@@ -1,0 +1,114 @@
+/* Aerospace Mission Control Dark Glassmorphism Styling */
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800;900&family=Rajdhani:wght@400;500;600;700&family=Share+Tech+Mono&display=swap');
+
+:root {
+    --bg-dark: #050a14;
+    --card-bg: rgba(13, 25, 48, 0.65);
+    --card-border: rgba(0, 217, 255, 0.18);
+    --accent-cyan: #00f0ff;
+    --accent-green: #00ff66;
+    --accent-red: #ff2a5f;
+    --accent-gold: #ffb700;
+    --text-primary: #e0f2fe;
+    --text-muted: #94a3b8;
+    --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.45);
+}
+
+.stApp {
+    background-color: var(--bg-dark);
+    background-image: 
+        radial-gradient(at 15% 15%, rgba(0, 240, 255, 0.05) 0px, transparent 50%),
+        radial-gradient(at 85% 85%, rgba(138, 43, 226, 0.05) 0px, transparent 50%);
+    color: var(--text-primary);
+    font-family: 'Rajdhani', sans-serif;
+}
+
+/* Glassmorphic Panel Cards */
+.hud-card {
+    background: var(--card-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--card-border);
+    border-radius: 12px;
+    padding: 18px 22px;
+    box-shadow: var(--glass-shadow);
+    transition: all 0.3s ease-in-out;
+}
+
+.hud-card:hover {
+    border-color: rgba(0, 240, 255, 0.4);
+    box-shadow: 0 8px 32px 0 rgba(0, 240, 255, 0.15);
+}
+
+/* Header & HUD Typography */
+.hud-title {
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 800;
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+    background: linear-gradient(135deg, #00f0ff 0%, #7000ff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 0;
+}
+
+.hud-subtitle {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 0.9rem;
+    color: var(--accent-cyan);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+/* Telemetry Status Badges */
+.badge-nominal {
+    background: rgba(0, 255, 102, 0.15);
+    border: 1px solid var(--accent-green);
+    color: var(--accent-green);
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 600;
+    font-size: 0.85rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 0 12px rgba(0, 255, 102, 0.3);
+}
+
+.badge-critical {
+    background: rgba(255, 42, 95, 0.2);
+    border: 1px solid var(--accent-red);
+    color: var(--accent-red);
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 600;
+    font-size: 0.85rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    animation: pulse 1.5s infinite;
+    box-shadow: 0 0 16px rgba(255, 42, 95, 0.5);
+}
+
+@keyframes pulse {
+    0% { opacity: 1; box-shadow: 0 0 12px rgba(255, 42, 95, 0.5); }
+    50% { opacity: 0.6; box-shadow: 0 0 24px rgba(255, 42, 95, 0.8); }
+    100% { opacity: 1; box-shadow: 0 0 12px rgba(255, 42, 95, 0.5); }
+}
+
+.metric-value {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.metric-label {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}

@@ -1,0 +1,116 @@
+/* Modern Dark Aerospace Glassmorphism Styling */
+
+:root {
+  --bg-dark: #050a14;
+  --panel-bg: rgba(13, 25, 48, 0.7);
+  --panel-border: rgba(0, 240, 255, 0.2);
+  --accent-cyan: #00f0ff;
+  --accent-green: #00ff66;
+  --accent-red: #ff2a5f;
+  --accent-gold: #ffb700;
+  --text-main: #e0f2fe;
+  --text-muted: #94a3b8;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-dark);
+  background-image: 
+    radial-gradient(at 10% 10%, rgba(0, 240, 255, 0.06) 0px, transparent 50%),
+    radial-gradient(at 90% 90%, rgba(138, 43, 226, 0.06) 0px, transparent 50%);
+  color: var(--text-main);
+  font-family: 'Rajdhani', sans-serif;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.glass-card {
+  background: var(--panel-bg);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--panel-border);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease;
+}
+
+.glass-card:hover {
+  border-color: rgba(0, 240, 255, 0.4);
+  box-shadow: 0 8px 32px 0 rgba(0, 240, 255, 0.12);
+}
+
+.title-orbitron {
+  font-family: 'Orbitron', sans-serif;
+  letter-spacing: 1.5px;
+}
+
+.mono-font {
+  font-family: 'Share Tech Mono', monospace;
+}
+
+.badge-nominal {
+  background: rgba(0, 255, 102, 0.15);
+  border: 1px solid var(--accent-green);
+  color: var(--accent-green);
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 0 12px rgba(0, 255, 102, 0.25);
+}
+
+.badge-critical {
+  background: rgba(255, 42, 95, 0.2);
+  border: 1px solid var(--accent-red);
+  color: var(--accent-red);
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  animation: pulse-red 1.5s infinite;
+}
+
+@keyframes pulse-red {
+  0% { opacity: 1; box-shadow: 0 0 12px rgba(255, 42, 95, 0.4); }
+  50% { opacity: 0.6; box-shadow: 0 0 24px rgba(255, 42, 95, 0.8); }
+  100% { opacity: 1; box-shadow: 0 0 12px rgba(255, 42, 95, 0.4); }
+}
+
+.btn-cyan {
+  background: linear-gradient(135deg, #00f0ff 0%, #0088ff 100%);
+  color: #000;
+  font-weight: 700;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-cyan:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0, 240, 255, 0.4);
+}
+
+.btn-dark {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn-dark:hover {
+  background: rgba(255, 255, 255, 0.12);
+}

@@ -14,3 +14,21 @@ env/
 # OS specific files
 .DS_Store
 Thumbs.db
+
+# Research Papers (Excluded per user instruction)
+papers/
+
+# Temporary Scratch Files
+scratch/
+
+# Node Modules & Frontend Dependencies
+node_modules/
+**/node_modules/
+dist/
+.vite/
+
+# Duplicate dataset cache inside App (already tracked in archive/)
+App/data/train/
+App/data/test/
+
+
